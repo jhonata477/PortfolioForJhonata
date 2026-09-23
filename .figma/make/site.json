@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a front-end developer's portfolio with an overview, detailed project pages, and skill highlights to attract potential clients or employers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

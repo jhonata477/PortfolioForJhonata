@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-comic: 'Bangers', cursive;
+  --font-body: 'Comic Neue', cursive;
+  --font-sans: 'Inter', sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: #fef08a;
+  color: #0a0a0a;
+  font-family: 'Comic Neue', cursive;
+}
+
+* { scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
+
+::selection { background: #ef4444; color: #fff; }
+
+/* halftone background pattern */
+.halftone {
+  background-image: radial-gradient(circle, #00000018 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.halftone-blue {
+  background-image: radial-gradient(circle, #1d4ed833 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+/* comic panel border */
+.panel {
+  border: 3px solid #0a0a0a;
+  box-shadow: 5px 5px 0 #0a0a0a;
+}
+
+.panel-lg {
+  border: 4px solid #0a0a0a;
+  box-shadow: 7px 7px 0 #0a0a0a;
+}
+
+/* speech bubble */
+.bubble {
+  position: relative;
+  border: 3px solid #0a0a0a;
+  box-shadow: 4px 4px 0 #0a0a0a;
+}
+.bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 24px;
+  border-width: 14px 10px 0;
+  border-style: solid;
+  border-color: #0a0a0a transparent transparent;
+}
+.bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 26px;
+  border-width: 12px 8px 0;
+  border-style: solid;
+  border-color: inherit transparent transparent;
+  z-index: 1;
+}
+
+/* action word styles */
+.action-word {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.04em;
+  -webkit-text-stroke: 2px #0a0a0a;
+  paint-order: stroke fill;
+}
+
+/* skewed badge */
+.skew-badge {
+  transform: skewX(-8deg);
+  display: inline-block;
+}
